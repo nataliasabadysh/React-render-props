@@ -15,3 +15,40 @@
 9. Чтобы запустить проект в режиме разработки, самое время выполнить  команду`npm start`;
 10. Перейди в браузер и открой страничку [http://localhost:3000](http://localhost:3000/). Когда страничка загрузится, ты увидишь страницу с сообщением «Добро пожаловать на воркшоп по React».
 11. Открой Chrome Dev Tools и перейди на вкладку Console, там не должно быть каких-либо ошибок.
+
+<h1> С помощью рендер пропсов Сделаем Отслеживание Мишки на экране <h1/>
+
+<ul>
+<li> Мышка на экране измеряеться в 2х единицах  X Y </li>
+<li> + in state add X Y  + обработчик onMouseMove = {this.handleMouseMove}</li>
+
+
+<li> Мышка на экране измеряеться в 2х единицах  X Y </li>
+<li> Мышка на экране измеряеться в 2х единицах  X Y </li>
+
+и меняем значеня с помошью свойств *clientX *clientY
+<p> x: e.clientX,</p>
+<p> y: e.clientY,</p>
+* Синтетические собития - кросбраузерные !
+
+    state = {
+        x: 0,
+        y: 0,
+    };
+  _handleMouseMove = (e) => {
+        this.setState({
+            x: e.clientX,
+            y: e.clientY,
+        });
+    }
+<div className = 'tracker' onMouseMove = {this._handleMouseMove}><h1>Tracker {this.state.x} {this.state.y}</h1> </div>
+* Так мы вывели цифры 
+<li> Animal component - кастомный _ДЛя переиспользования сделан .  используем modul-ьный подход  
+Tile - Component (bjc) return murkup
+
+вызываем         const { render } = this.props; рендер который приходит из пропсов 
+</li>
+
+</ul>
+
+
